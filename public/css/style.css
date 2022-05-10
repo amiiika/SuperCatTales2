@@ -1,30 +1,32 @@
 @import "font.css";
 
 /* background */
-body{
+body {
     background-color: rgba(98, 198, 255, 1);
-    background-image:url(../src/cloudz.gif), url(../src/background.png);
+    background-image: url(../src/cloudz.gif), url(../src/background.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 /* Logo */
-.logo{
+.logo {
     width: 60vw;
     display: block;
     margin: auto;
     margin-top: 5%;
 }
 
+.jump {
+    animation: jump 3s steps(1, end) infinite;
+}
 /* Start Button */
-.playBtn{
-    width: 60vw;
+.playBtn {
     display: block;
     margin: auto;
     margin-top: 5%;
     /* style */
     background-color: rgb(255, 0, 83);
-    border-color: rgb(121, 50, 85) ;
+    border-color: rgb(121, 50, 85);
     border-width: 4px;
     border-style: solid;
     color: rgb(255, 255, 255);
@@ -32,39 +34,64 @@ body{
     font-family: "super_cat_fontregular";
 }
 
-.responsive-width{
-    font-size: 5vw;
+.responsive-width {
+    font-size: 6vw;
     width: 35vh;
 }
 
+/* fadeOut and fadeIn */
+.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.fadeIn {
+    opacity: 3;
+    pointer-events: all;
+}
 /* Button text blink */
-.blink{
+.blink {
     animation: blink 3s steps(1, end) infinite;
 }
 
-@keyframes blink{
-    0%{
+/* animations */
+@keyframes blink {
+    0% {
         opacity: 1;
     }
-    10%{
+10% {
         opacity: 0;
     }
-    20%{
+20% {
         opacity: 1;
     }
-    40%{
+40% {
         opacity: 1;
     }
-    45%{
+45% {
         opacity: 0;
     }
-    50%{
+50% {
         opacity: 1;
     }
-    55%{
+55% {
         opacity: 0;
     }
-    60%{
+60% {
         opacity: 1;
+    }
+}
+
+@keyframes jump {
+    0% {
+        margin-top: 5%;
+    }
+
+    5% {
+        margin-top: 0%;
+    }
+
+    10% {
+        margin-top: 5%;
     }
 }
