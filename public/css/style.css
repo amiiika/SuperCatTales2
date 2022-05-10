@@ -1,0 +1,70 @@
+@import "font.css";
+
+/* background */
+body{
+    background-color: rgba(98, 198, 255, 1);
+    background-image:url(../src/cloudz.gif), url(../src/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Logo */
+.logo{
+    width: 60vw;
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+}
+
+/* Start Button */
+.playBtn{
+    width: 60vw;
+    display: block;
+    margin: auto;
+    margin-top: 5%;
+    /* style */
+    background-color: rgb(255, 0, 83);
+    border-color: rgb(121, 50, 85) ;
+    border-width: 4px;
+    border-style: solid;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 1px 0px rgb(121, 50, 85);
+    font-family: "super_cat_fontregular";
+}
+
+.responsive-width{
+    font-size: 5vw;
+    width: 35vh;
+}
+
+/* Button text blink */
+.blink{
+    animation: blink 3s steps(1, end) infinite;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    }
+    10%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 1;
+    }
+    45%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    55%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 1;
+    }
+}
