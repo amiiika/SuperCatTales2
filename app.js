@@ -8,29 +8,31 @@ const ejs = require("ejs");
 //enable the css, ejs and bodyparser
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+
 // app.use(bodyParser.urlencoded({ extended: true }));
 
 //host the views
 app.get("/", function (req, res) {
-  res.render("index");
+  res.render("index.ejs");
 });
 
-//fadeout intro
-const fadeOutIntro = () => {
-  const playBtn = document.querySelector(".playBtn");
-  const startScreen = document.querySelector(".startScreen");
-  const selectScreen = document.querySelector(".selectScreen");
+app.get("/howToPlay", function (req, res) {
+  res.render("howToPlay.ejs");
+});
 
-  //start button clicked
-  playBtn.addEventListener("click", () => {
-    startScreen.classList.add("fadeOut");
-    selectScreen.classList.add("fadeIn");
-  });
-};
+app.get("/catSelect", function (req, res) {
+  res.render("catSelect.ejs");
+});
 
-fadeOutIntro();
+app.get("/itemSelect", function (req, res) {
+  res.render("itemSelect.ejs");
+});
 
-//localhost and other host codes if needed
-app.listen(process.env.PORT || 4000, function () {
-  console.log("The server has started :P");
+app.get("/worldSelect", function (req, res) {
+  res.render("worldSelect.ejs");
+});
+
+//app listen on ports
+app.listen(process.env.PORT || 3000, function () {
+  console.log("the cats are running");
 });

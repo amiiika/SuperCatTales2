@@ -1,0 +1,14 @@
+/* import fonts */
+@import "Font/font.css";
+@import url('http://fonts.cdnfonts.com/css/edit-undo-brk');
+
+
+@media (min-width: 768px) {
+    .navbar-brand.abs {
+        position: absolute;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+}
